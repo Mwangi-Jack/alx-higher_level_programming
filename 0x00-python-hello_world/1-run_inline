@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $PYCODE > main.py && python main.py
+echo $PYCODE > main.py && python3 main.py
