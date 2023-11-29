@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdbool.h>
-
 
 /**
  * check_cycle - Function
@@ -17,7 +15,7 @@ int check_cycle(listint_t *list)
 	listint_t *ptr1 = list;
 	listint_t *ptr2 = list;
 
-	while (ptr2 != NULL && ptr2->next != NULL)
+	while (ptr2 != NULL && ptr2->next != NULL && ptr2->next != NULL)
 	{
 		ptr1 = ptr1->next;
 		ptr2 = ptr2->next->next;
