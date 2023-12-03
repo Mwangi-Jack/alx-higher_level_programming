@@ -8,7 +8,7 @@ def max_integer(my_list=[]):
     max_val = 0
 
     for index, value in enumerate(my_list):
-        if value > max_val:
+        if value >= max_val:
             max_val = value
 
     return max_val
