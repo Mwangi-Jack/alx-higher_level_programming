@@ -1,14 +1,13 @@
 #!/usr/bin/python3
 
 def max_integer(my_list=[]):
+    if len(my_list) > 0:
+        max_val = 0
 
-    if len(my_list) < 0:
-        return None
+        for index, value in enumerate(my_list):
+            if value > max_val:
+                max_val = value
 
-    max_val = 0
+        return max_val
 
-    for index, value in enumerate(my_list):
-        if value > max_val:
-            max_val = value
-
-    return max_val
+    return None
