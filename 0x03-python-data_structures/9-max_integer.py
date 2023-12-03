@@ -12,4 +12,3 @@ def max_integer(my_list=[]):
             max_val = value
 
     return max_val
-
