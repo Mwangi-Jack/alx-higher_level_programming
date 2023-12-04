@@ -14,19 +14,19 @@
 */
 listint_t *reverseList(listint_t *head)
 {
-	listint_t *current = head;
 	listint_t *prev = NULL;
+	listint_t *current = head;
+	listint_t *next = NULL;
 
-	head->next = NULL;
-
-	while (current->next != NULL)
+	while (current)
 	{
+		next = current->next;
 		current->next = prev;
-		prev =  current;
-
+		prev = current;
+		current = next;
 	}
 
-	return (current);
+	return (prev);
 }
 
 /**
