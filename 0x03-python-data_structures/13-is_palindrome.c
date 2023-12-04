@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stddef.h>
+#include <stdlib.h>
 
 /**
  * reverseList - function
@@ -48,6 +49,7 @@ int is_palindrome(listint_t **head)
 		if (ptr1->n != ptr2->n)
 		{
 			return (0);
+			exit(0);
 		}
 	}
 
