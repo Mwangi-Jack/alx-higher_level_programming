@@ -44,6 +44,9 @@ int is_palindrome(listint_t **head)
 	listint_t *ptr1 = *head;
 	listint_t *ptr2 = reverseList(*head);
 
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
+
 	while (ptr1->next != NULL && ptr2->next != NULL)
 	{
 		if (ptr1->n != ptr2->n)
