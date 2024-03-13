@@ -1,15 +1,20 @@
 #!/usr/bin/node
 
-const args = process.argv.slice(2);
+let biggest = 0;
+let i;
+const arrayNumbers = [];
 
-if (args.length === 0) {
-  console.log(0);
-} else {
-  if (args.length === 1) {
-    console.log(0);
-  } else {
-    const order = args.sort((a, b) => a - b);
-    console.log(order);
-    console.log(order[args.length - 2]);
+for (i = 2; i < process.argv.length; i++) {
+  if (Number.isNaN(parseInt(process.argv[i])) === false) {
+    arrayNumbers[i - 2] = parseInt(process.argv[i]);
   }
 }
+
+if (arrayNumbers.length > 1) {
+  biggest = Math.max.apply(null, arrayNumbers);
+  i = arrayNumbers.indexOf(biggest);
+  arrayNumbers[i] = -Infinity;
+  biggest = Math.max.apply(null, arrayNumbers);
+}
+
+console.log(biggest);
