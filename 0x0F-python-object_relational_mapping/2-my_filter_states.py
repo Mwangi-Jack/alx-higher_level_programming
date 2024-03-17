@@ -5,8 +5,8 @@ This script takes in an argument and displays all values in the 'states'
 table of 'hbtn_0e_0_usa' where 'name' matches the argument
 """
 
-import MySQLdb
 import sys
+import MySQLdb
 
 if __name__ == '__main__':
 
@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
     conn.execute("SELECT * FROM states \
         WHERE CONVERT(`name` using Latin1) \
-        COLLATE latin1_General_CS =%s", (args[4],))
+        COLLATE latin1_General_CS = '{}';".format(args[4]))
 
     states = conn.fetchall()
 
