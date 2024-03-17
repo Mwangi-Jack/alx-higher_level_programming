@@ -12,12 +12,14 @@ if __name__ == '__main__':
 
     args = sys.argv
 
-    db = MySQLdb.connect(host='localhost', user=args[1], passwd=args[2], db=args[3])
+    db = MySQLdb.connect(host='localhost',
+                         user=args[1], passwd=args[2], db=args[3])
 
     conn = db.cursor()
 
-    conn.execute("SELECT * FROM states WHERE CONVERT(`name` using Latin1) \
-        COLLATE latin1_General_CS = %s;", (args[4],))
+    conn.execute("SELECT * FROM states \
+        WHERE CONVERT(`name` using Latin1) \
+        COLLATE latin1_General_CS =%s", (args[4],))
 
     states = conn.fetchall()
 
