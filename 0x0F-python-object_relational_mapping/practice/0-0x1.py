@@ -20,4 +20,4 @@ else:
 conn = engine.connect()
 print(conn)
 
-user = session.query(column('fist_table')).all()
+for instance in session.query('first_table').all()
