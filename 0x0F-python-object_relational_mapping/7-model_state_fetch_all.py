@@ -13,13 +13,13 @@ from model_state import State
 if __name__ == '__main__':
     args = sys.argv
 
-    engine = create_engine(f'mysql://{args[1]}:{args[2]}@localhost:3306/{args[3]}')
+    engine = create_engine(f'mysql://{args[1]}:\
+                           {args[2]}@localhost:3306/{args[3]}')
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-
-    states = session.query(State).order_by(State.id).all()
-
+    states = session.query(State) \
+        .order_by(State.id).all()
     for state in states:
         print(f'{state.id}: {state.name}')
