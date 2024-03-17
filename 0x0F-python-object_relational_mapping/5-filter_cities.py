@@ -23,5 +23,4 @@ if __name__ == '__main__':
 
     cities = conn.fetchall()
 
-    for city in cities:
-        print(city[0], end=" ")
+    print(", ".join([city[0] for city in cities]))
