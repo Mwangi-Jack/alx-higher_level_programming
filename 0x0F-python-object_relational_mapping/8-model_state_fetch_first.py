@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+a script that prints the first 'State' object from the database 'hbtn_0e_6_usa'
+"""
+
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -17,4 +21,4 @@ if __name__ == '__main__':
 
     state = session.query(State).first()
 
-    print(f"{state.id}: {state.name}")
+    print("{}: {}".format(state.id, state.name))
