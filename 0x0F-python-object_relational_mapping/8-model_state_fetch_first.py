@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-a script that prints the first 'State' object from the database 'hbtn_0e_6_usa'
+a script that prints the first 'State' object
+from the database 'hbtn_0e_6_usa'
 """
 
 import sys
@@ -21,4 +22,7 @@ if __name__ == '__main__':
 
     state = session.query(State).first()
 
-    print("{}: {}".format(state.id, state.name))
+    if not state:
+        print('Nothing\n')
+    else:
+        print("{}: {}".format(state.id, state.name))
