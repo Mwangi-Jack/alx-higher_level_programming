@@ -1,3 +1,3 @@
 #!/bin/bash
 #sends a delete request and displays the body of the response
-curl -LX  DELETE $1
+curl -sX  DELETE $1
