@@ -12,12 +12,8 @@ import urllib.parse
 if __name__ == '__main__':
     args = sys.argv
     params = {'email': args[2]}
-
     data = urllib.parse.urlencode(params)
-    print(data)
-
     reqUrl = f"{args[1]}?{data}"
-    print(reqUrl)
 
     with urllib.request.urlopen(reqUrl) as response:
         html = response.read()
