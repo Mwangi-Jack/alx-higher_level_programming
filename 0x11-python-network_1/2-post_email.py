@@ -11,11 +11,14 @@ import urllib.parse
 
 if __name__ == '__main__':
     args = sys.argv
-    params = {'email': args[2]}
+    params = {"email": args[2]}
+
     data = urllib.parse.urlencode(params)
-    data = data.encode('utf-8')
-    req =urllib.request.Request(args[1], data)
+    data = data.encode('ascii')
+
+    req = urllib.request.Request(args[1], data)
 
     with urllib.request.urlopen(req) as response:
         body = response.read()
-        print(body)
+
+        print(body.decode('utf-8'))
