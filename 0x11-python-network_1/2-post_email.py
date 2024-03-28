@@ -13,9 +13,9 @@ if __name__ == '__main__':
     args = sys.argv
     params = {'email': args[2]}
     data = urllib.parse.urlencode(params)
+    data = data.encode('utf-8')
     reqUrl = f"{args[1]}?{data}"
 
     with urllib.request.urlopen(reqUrl) as response:
         html = response.read()
-        html.decode('utf-8')
         print(html)
