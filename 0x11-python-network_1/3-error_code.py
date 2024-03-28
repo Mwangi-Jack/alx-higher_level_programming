@@ -11,7 +11,7 @@ import urllib.request
 if __name__ == '__main__':
     args = sys.argv
 
-    try :
+    try:
         req = urllib.request.Request(args[1])
 
         with urllib.request.urlopen(req) as response:
