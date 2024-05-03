@@ -1,0 +1,11 @@
+$(document).ready(function(){
+	$('div#add_item').click(()=>{
+		$('ul.my_list').append("<li>Items</li>")
+	})
+	$('div#remove_item').click(()=>{
+		$('li').last().remove()
+	})
+	$('div#clear_list').click(()=>{
+		$('li').detach()
+	})
+})
