@@ -11,12 +11,12 @@ class Rectangle:
         self.__width = width
         self.__height = height
 
-    def get_height(self):
+    def height(self):
         """This method returns the private attribute 'height'"""
 
         return self.__height
 
-    def set_height(self, value):
+    def height(self, value):
         "This method sets the height"
 
         if not isinstance(value, int):
@@ -25,11 +25,11 @@ class Rectangle:
         if value < 0:
             raise ValueError('height must be >= 0')
 
-    def get_width(self):
+    def width(self):
         """This method returns the private attribute width"""
         return self.__width
 
-    def set_width(self, value):
+    def width(self, value):
         """This method sets the private attribute width"""
         if not isinstance(value, int):
             raise ValueError('width must be an integer')
