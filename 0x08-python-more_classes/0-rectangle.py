@@ -4,4 +4,5 @@
 
 
 class Rectangle:
+    """This class defines all its methods"""
     pass
