@@ -66,4 +66,4 @@ class Rectangle:
     def __del__(self):
         """This function detects  instance deletion"""
 
-        print('By rectangle...')
+        print('Bye rectangle...')
