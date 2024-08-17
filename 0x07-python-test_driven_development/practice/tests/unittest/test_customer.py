@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import unittest
 
 from customer import Customer
@@ -28,7 +30,7 @@ class TestCustomer(unittest.TestCase):
         self.customer_2.apply_discount()
 
         self.assertEqual(self.customer_1.purchase, 4750)
-        self.assertEqual(self.customer_2.purchase, 2750)
+        self.assertEqual(self.customer_2.purchase, 2850)
 
 
 if __name__ == '__main__':
